@@ -13,9 +13,9 @@
 					<div class="banner-block-item">
 						
 						<h1>Stay Home</h1>
-						<p>Order your products and get them deliverd at your doorsteps.</p>
-						<button class="custom-button" value="Send" style="margin:0px"><a href="tel:+91-9837725251" onMouseOver="this.style.background='none'" style="color: #fafafa;font-weight: 400;">Call now</a></button>
-						or <button class="custom-button" value="Send" style="margin:0px"><a href="https://wa.me/919837725251" onMouseOver="this.style.background='none'" style="color: #fafafa;font-weight: 400;">WhatsApp</a></button>
+						<p class="banner-text">Order your products and get them deliverd at your doorsteps.</p>
+						<button class="custom-button banner-button" value="Send" style="margin:0px"><a href="tel:+91-9837725251" onMouseOver="this.style.background='none'" style="color: #fafafa;font-weight: 400;">Call now</a></button>
+						or <button class="custom-button banner-button" value="Send" style="margin:0px"><a href="https://wa.me/919837725251" onMouseOver="this.style.background='none'" style="color: #fafafa;font-weight: 400;">WhatsApp</a></button>
 					</div>
 				</div>
 			</div>
@@ -24,19 +24,19 @@
 <div class="instructions-block">
 	<div class="container">
 	<div class="steps row margin">
-		<div class="steps-blocks col-md-4">
+		<div class="steps-blocks col-xs-12 col-sm-12 col-sm-12 col-12 col-md-12 col-lg-4">
 			<div class="steps-margins">
 				<div class="steps-items image"><img class="steps-images img-fluid" src="{% static 'images/phone-call.jpg' %}"	alt=""></div>
 				<div class="steps-items"><p class="steps-text">Give us a call </p></div>
 			</div>
 		</div>
-		<div class="steps-blocks col-md-4">
+		<div class="steps-blocks col-xs-12 col-12 col-md-12 col-lg-4">
 			<div class="steps-margins">
 				<div class="steps-items"><img class="steps-images img-fluid" src="{% static 'images/create-list.jpg' %}" alt=""></div>
 				<div class="steps-items"><p class="steps-text">Give us your list</p></div>
 			</div>
 		</div>
-		<div class="steps-blocks col-md-4">
+		<div class="steps-blocks col-xs-12 col-12 col-md-12 col-lg-4">
 			<div class="steps-margins">
 				<div class="steps-items"><img class="steps-images img-fluid" src="{% static 'images/32.jpg' %}" alt=""></div>
 				<div class="steps-items"><p class="steps-text">Wait for your delivery</p></div>
@@ -55,7 +55,7 @@
 			<div class="support-center-items">
 				<div class="support-heading">
 					<h1>Want us to call you?</h1>
-					<p>Just give us your number.</p>
+					<p class="banner-text">Just give us your number.</p>
 				</div>
 				<div class="support-form">
 					<form action="{% url 'contact' %}" method="POST">{%csrf_token%}
@@ -77,26 +77,26 @@
 					<h1 style="font-weight: 200;">Fast and reliable delivery</h1>
 				</div>
 			</div>
-			<div class=" row col-md-12 margin">
-				<div class="col-md-3 service-types">
+			<div class=" row col-lg-12 margin ">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/groceries.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Groceries</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/hospital.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Medical Supplies</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/pineapple.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Fruits</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/broccoli.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Vegetables</div>
@@ -104,25 +104,25 @@
 				</div>
 			</div>
 			<div class=" row col-md-12 margin">
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/veterinary.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Pet care</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/box.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Parcels</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/cow.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Dairy</div>
 					</div>
 				</div>
-				<div class="col-md-3 service-types">
+				<div class="col-md-6 col-lg-3 service-types">
 					<div class="service-type-block">
 						<div class="service-image"><img src="{% static 'images/present.png' %}" class="img-fluid" alt=""></div>
 						<div class="service-desc">Gifts</div>
