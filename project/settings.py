@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's#du()k&b-^&_5)vdfs1rercu59+58t2y6gmjch-&!$2h9ikm#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.43.157','172.20.10.14','localhost']
+ALLOWED_HOSTS = ['192.168.43.157','172.20.10.14','localhost','3.15.160.191','pre-go.in','www.pre-go.in']
 
 
 # Application definition
