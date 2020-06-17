@@ -151,17 +151,21 @@ input[type=text]:focus{
 	color: #f6f6f6;
 	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
 }
+.nav-logo{
+	display: flex;
+}
 .nav-logo>a{
 	color: rgba(255,255,255,.85);
 	font-size: 26px;
 	font-weight: 600;
+	margin: auto;
 }
 .nav-logo>a:hover{
 	color: #ffffff;
 	text-decoration: none;
 }
-.nav-items{
-	display: flex;
+.nav-item{
+	
 }
 .nav-items-list{
 	list-style-type: none;
@@ -175,6 +179,14 @@ input[type=text]:focus{
 	}
 }
 @media only screen and (max-width: 991px){
+	.nav-item:first-child{
+		margin-left: -37px;
+	}
+	.nav-items-list{
+		display:block;
+		text-align: center;
+		font-size: 30px;
+	}
 	li>a{
 		padding: 24px 5px;
 	}
