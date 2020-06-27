@@ -36,10 +36,10 @@
     <link href="{% static 'css/custom1.css' %}" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1">
+    <nav class="site-header  py-1">
   <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    <a class="py-2" href="{% url 'home2' %}" aria-label="Product" style="text-align: center;">
+      PreeGo
     </a>
     <a class="py-2 d-cus d-md-inline-block" href="tel:+91-9837725251">+91-9837725251</a>
     <a class="py-2 d-cus d-md-inline-block" href="tel:+91-9997844044">+91-9997844044</a>
@@ -51,7 +51,8 @@
   <div class="col-md-5 p-lg-5 mx-auto my-5">
     <h1 class="display-4 font-weight-normal">Stay Home</h1>
     <p class="lead font-weight-normal">We are here to help. We will deliver all essential goods at your doorsteps. No need for you to step out in this scorching heat amid increasing no. of Covid19 cases.   </p>
-    <a class="btn btn-outline-secondary" href="#">Just Call Us</a>
+    <a class="btn btn-outline-secondary" href="tel:+91-9837725251">Just Call Us</a> or
+    <a class="btn btn-outline-secondary" href="https://wa.me/919837725251">WhatsApp Us</a>
   </div>
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -83,7 +84,7 @@
     </div>
     <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 200px; border-radius: 21px 21px 0 0;"><img src="{% static 'images/image_package.jpg'%}" style=" width:100%;height: 100%; border-radius: 21px 21px 0 0;"alt=""></div>
   </div>
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center mt-p text-white overflow-hidden">
     <div class="my-3 py-3">
       <h2 class="display-5">Meat & Fish</h2>
       <p class="lead">Brought from your trusted butcher.</p>
@@ -93,7 +94,7 @@
 </div>
 
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 mt-p text-center text-white overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Medicines</h2>
       <p class="lead">Never miss a pill.</p>
@@ -117,7 +118,7 @@
     </div>
     <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 200px; border-radius: 21px 21px 0 0;"><img src="{% static 'images/image_gift.jpg'%}" style=" width:100%;height: 100%; border-radius: 21px 21px 0 0;"alt=""></div>
   </div>
-  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 mt-p mb-p text-center text-white overflow-hidden">
     <div class="my-3 py-3">
       <h2 class="display-5">Any store in the City</h2>
       <p class="lead">Tell us if you prefer someone.</p>
@@ -126,9 +127,32 @@
   </div>
 </div>
 </div>
+
+<!-- customer help column -->
+
+<div class="support-block" style="background-color: #343a40!important;">
+  <div class="container">
+    <div class="support-center">
+      <div class="support-center-items">
+        <div class="support-heading">
+          <h1>Want us to call you?</h1>
+          <p class="banner-text">Just give us your number.</p>
+        </div>
+        <div class="support-form">
+          <form action="{% url 'contact' %}" method="POST">{%csrf_token%}
+            <input type="number" name="number"   placeholder="Type your number" class="mob-no-box">
+            <input type="submit" class="custom-button" value="Send">    
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- customer help column ends -->
+
 <footer class=" py-5">
   <div class="row">
-    <div class="col-12 col-md">
+    <!-- <div class="col-12 col-md">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
       <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
     </div>
@@ -169,7 +193,29 @@
         <li><a class="text-muted" href="#">Privacy</a></li>
         <li><a class="text-muted" href="#">Terms</a></li>
       </ul>
+    </div> -->
+    <div class="container">
+    <div class="row footer-row">
+      <div class="footer-blocks col-md-12">
+        <div class="footer-center">
+          <h1 style="margin-bottom:0px;">PreeGo</h1>
+          <p>Delivering your essentials</p>
+          <!-- <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Help</a></li>
+          </ul> -->
+        <!-- <div class="footer-description">
+          <h6 style="font-weight: 200">Copyright &copy 2019-2020 Sightnext Informatics Pvt. Ltd. All rights reserved.</h6>
+        </div>
+        <div>
+          <p><a href="" style="">T&C</a> | <a href="">FAQ </a></p>
+        </div> -->
+        </div>
+      </div>
     </div>
+  </div>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

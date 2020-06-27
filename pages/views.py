@@ -28,51 +28,120 @@ def contact_entry(request):
 	#import ipdb; ipdb.set_trace()
 	context={}
 	user=request.user
-	if request.method == "POST":
-		number= request.POST.get("number")
-		if not Contact.objects.filter(number=number).exists():
-			instance=Contact(
-				number=number,
-				count=1,
+	try:
+		if request.method == "POST":
+			number= request.POST.get("number")
+			if not Contact.objects.filter(number=number).exists():
+				instance=Contact(
+					number=number,
+					count=1,
+					)
+				instance.save()
+				subject = "user contacted"
+				message =  (number + " has requested contact")
+				from_email = settings.EMAIL_HOST_USER
+				to_email = [settings.EMAIL_RECEIVER]
+				send_mail(
+					subject,
+					message,
+					from_email,
+					to_email,
+					fail_silently=False,
 				)
-			instance.save()
-			subject = "user contacted"
-			message =  (number + " has requested contact")
-			from_email = settings.EMAIL_HOST_USER
-			to_email = [settings.EMAIL_RECEIVER]
-			send_mail(
-				subject,
-				message,
-				from_email,
-				to_email,
-				fail_silently=False,
-			)
-			# subject = "no-reply"
-			# message =  "Thank you for contacting us. We will get back to you as soon as possible."
-			# from_email = settings.EMAIL_HOST_USER
-			# to_email = [email]
-			# send_mail(
-			# 	subject,
-			# 	message,
-			# 	from_email,
-			# 	to_email,
-			# 	fail_silently=False,
-			# )
-		else:
-			numb=Contact.objects.get(number=number)
-			numb.count+=1
-			numb.save()
-			subject = "user contacted"
-			message =  (number + " has requested contact ")
-			from_email = settings.EMAIL_HOST_USER
-			to_email = [settings.EMAIL_RECEIVER]
-			send_mail(
-				subject,
-				message,
-				from_email,
-				to_email,
-				fail_silently=False,
-			)
+				# subject = "no-reply"
+				# message =  "Thank you for contacting us. We will get back to you as soon as possible."
+				# from_email = settings.EMAIL_HOST_USER
+				# to_email = [email]
+				# send_mail(
+				# 	subject,
+				# 	message,
+				# 	from_email,
+				# 	to_email,
+				# 	fail_silently=False,
+				# )
+			else:
+				numb=Contact.objects.get(number=number)
+				numb.count+=1
+				numb.save()
+				subject = "user contacted"
+				message =  (number + " has requested contact ")
+				from_email = settings.EMAIL_HOST_USER
+				to_email = [settings.EMAIL_RECEIVER]
+				send_mail(
+					subject,
+					message,
+					from_email,
+					to_email,
+					fail_silently=False,
+				)
+	except:
+		print(number)
+		context={
+			'message':'please enter a valid no.'
+		}
+		context.update(csrf(request))
+		return HttpResponseRedirect('/')
 
 	context.update(csrf(request))
 	return HttpResponseRedirect('/')
+
+
+def contact_entry2(request):
+	#import ipdb; ipdb.set_trace()
+	context={}
+	user=request.user
+	try:
+		if request.method == "POST":
+			number= request.POST.get("number")
+			if not Contact.objects.filter(number=number).exists():
+				instance=Contact(
+					number=number,
+					count=1,
+					)
+				instance.save()
+				subject = "user contacted"
+				message =  (number + " has requested contact")
+				from_email = settings.EMAIL_HOST_USER
+				to_email = [settings.EMAIL_RECEIVER]
+				send_mail(
+					subject,
+					message,
+					from_email,
+					to_email,
+					fail_silently=False,
+				)
+				# subject = "no-reply"
+				# message =  "Thank you for contacting us. We will get back to you as soon as possible."
+				# from_email = settings.EMAIL_HOST_USER
+				# to_email = [email]
+				# send_mail(
+				# 	subject,
+				# 	message,
+				# 	from_email,
+				# 	to_email,
+				# 	fail_silently=False,
+				# )
+			else:
+				numb=Contact.objects.get(number=number)
+				numb.count+=1
+				numb.save()
+				subject = "user contacted"
+				message =  (number + " has requested contact ")
+				from_email = settings.EMAIL_HOST_USER
+				to_email = [settings.EMAIL_RECEIVER]
+				send_mail(
+					subject,
+					message,
+					from_email,
+					to_email,
+					fail_silently=False,
+				)
+	except:
+		print(number)
+		context={
+			'message':'please enter a valid no.'
+		}
+		context.update(csrf(request))
+		return HttpResponseRedirect('/')
+	context.update(csrf(request))
+	return HttpResponseRedirect('/2')

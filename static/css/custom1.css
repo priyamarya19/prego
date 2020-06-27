@@ -53,6 +53,11 @@ a:hover{
 	z-index: 700;
 	color: #f1f1f1;
 }
+
+.btn-outline-secondary {
+    color: #212529;
+}
+
 @media only screen and (max-width: 991px){
 	.banner-block-item{
 		max-width: 400px;
@@ -158,11 +163,18 @@ li>a:hover{
     outline: none;
 }
 
-input[type=text]:focus{
+input[type=number]:focus{
 	
 	width: 400px;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .navbar{
 	background: #2f2519;
 	padding: 15px 0px;
@@ -224,9 +236,23 @@ input[type=text]:focus{
 	li>a{
 		padding: 10px 5px;
 	}
+	.mt-p{
+		margin-top: 25px;
+	}
+	.mb-p{
+		margin-bottom: 25px;
+	}
 
 }
 
+
+.pb-5, .py-5 {
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+}
+.site-header a{
+	color: white;
+}
 .steps{
 
 }

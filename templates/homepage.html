@@ -58,7 +58,7 @@
 					<p class="banner-text">Just give us your number.</p>
 				</div>
 				<div class="support-form">
-					<form action="{% url 'contact' %}" method="POST">{%csrf_token%}
+					<form action="{% url 'contact2' %}" method="POST">{%csrf_token%}
 						<input type="text" name="number" placeholder="Type your number" class="mob-no-box">
 						<input type="submit" class="custom-button" value="Send">		
 					</form>
