@@ -259,7 +259,13 @@ input[type=text]:focus{
 		font-weight: 400;
 	}
 	.steps-blocks{
-		margin:60px 0px;
+		margin:0px;
+	}
+	.steps-blocks:first-child{
+		margin-top:60px;
+	}
+	.steps-blocks:last-child{
+		margin-bottom:60px;
 	}
 }
 
