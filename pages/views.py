@@ -9,14 +9,14 @@ def home(request):
 	context={
 		'message':"Hello there!! You have reached our page. Welcome!!"
 	}
-	return render(request,'home.html',context)
+	return render(request,'homepage.html',context)
 
 
 def home2(request):
 	context={
 		'message':"Hello there!! You have reached our page. Welcome!!"
 	}
-	return render(request,'homepage.html',context)
+	return render(request,'home.html',context)
 
 def home3(request):
 	context={
