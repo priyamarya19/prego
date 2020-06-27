@@ -9,7 +9,20 @@ def home(request):
 	context={
 		'message':"Hello there!! You have reached our page. Welcome!!"
 	}
+	return render(request,'home.html',context)
+
+
+def home2(request):
+	context={
+		'message':"Hello there!! You have reached our page. Welcome!!"
+	}
 	return render(request,'homepage.html',context)
+
+def home3(request):
+	context={
+		'message':"Hello there!! You have reached our page. Welcome!!"
+	}
+	return render(request,'home3.html',context)
 
 def contact_entry(request):
 	#import ipdb; ipdb.set_trace()
