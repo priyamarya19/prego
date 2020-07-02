@@ -11,6 +11,15 @@ def home(request):
 	}
 	return render(request,'homepage.html',context)
 
+def why(request):
+	context={
+		'message':"Hello there!! You have reached why page. Welcome!!"
+	}
+	return render(request,'why.html',context)
+
+def how(request):
+	context={}
+	return render(request,'how.html',context)
 
 def home2(request):
 	context={

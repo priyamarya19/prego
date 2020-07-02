@@ -1,62 +1,84 @@
+{% extends 'base2.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Pre-Go | Delivering products at your door</title>
+{% block data %}
+    
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/product.css' %}" rel="stylesheet">
-    <link href="{% static 'css/custom1.css' %}" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header  py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2 fs-h-1" href="{% url 'home2' %}" aria-label="Product" style="text-align: center;font-size: 25px;">
-      Pre-Go
+<!-- carousel starts -->
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        
+          <div class="carousel-caption">
+            <h1>No need to download new app.</h1>
+            <p> A simple call or message is enough to place your order.</p>
+            <p><a class="car-link" href="{% url 'how' %}"><input type="submit" class="custom-button" value="Learn more"></a></p>
+          </div>
+        
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        
+          <div class="carousel-caption">
+            <h1>Video call for selecting stuff.</h1>
+            <p>Choose between multiple designs, colours, brand, etc. </p>
+            <p><a class="car-link" href="{% url 'how' %}"><input type="submit" class="custom-button" value="Learn more"></a></p>
+          </div>
+        
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+       
+          <div class="carousel-caption">
+            <h1>Power to move things.</h1>
+            <p>Buy from your local and trusted shops while sitting at your home. </p>
+            <p><a class="car-link" href="{% url 'why' %}"><input type="submit" class="custom-button" value="Learn more"></a></p>
+          </div>
+      
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
     </a>
-    <a class="py-2 d-cus d-md-inline-block" href="tel:+91-8077966653"><img src="{% static 'images/whatsapp.png' %}" class="nav-item-image">+91-8077966653</a>
-    <a class="py-2 d-cus d-md-inline-block" href="tel:+91-9837725251">+91-9837725251</a>
-    <a class="py-2 d-cus d-md-inline-block" href="tel:+91-9997844044">+91-9997844044</a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-</nav>
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 font-weight-normal">Stay Home</h1>
-    <p class="lead font-weight-normal">We are here to help. We will deliver all essential goods at your doorsteps. No need for you to step out in this scorching heat amid increasing no. of Covid19 cases.   </p>
-    <a class="btn btn-outline-secondary" href="tel:+91-8077966653">Just Call Us</a> or
-    <a class="btn btn-outline-secondary" target="_blank" href="https://wa.me/918077966653?text=Hello!%20I%20will%20like%20to%20order%20something.%20">WhatsApp Us</a>
+
+  <!-- carousel ends -->
+
+
+  <!-- banner starts -->
+
+
+<!-- banner ends -->
+
+
+<!-- message section starts -->
+<div class="mesg-secs">
+  <div class="container">
+    <div class="mesg-sec-content">
+        <h1 class="display-4 font-weight-normal" style="text-align: center">Stay Home</h1>
+        <p class="lead font-weight-normal" style="text-align: center">We are here to help. We will deliver all essential goods at your doorsteps. No need for you to step out in this scorching heat amid increasing no. of Covid19 cases.   </p>
+      <div class='mesg-sec-links'>
+          <a class="btn btn-outline-secondary" href="tel:+91-8077966653">Just Call Us</a> or
+          <a class="btn btn-outline-secondary" target="_blank" href="https://wa.me/918077966653?text=Hello!%20I%20will%20like%20to%20order%20something.%20">WhatsApp Us</a>
+      </div>
+    </div>
   </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
+
+<!-- message section ends -->
+
+
 <!-- container starts -->
 <div class="container">
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
@@ -189,78 +211,6 @@
 </div>
 
 <!-- instructions block ends -->
-<footer class=" py-5">
-  <div class="row">
-    <!-- <div class="col-12 col-md">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Features</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Cool stuff</a></li>
-        <li><a class="text-muted" href="#">Random feature</a></li>
-        <li><a class="text-muted" href="#">Team feature</a></li>
-        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-        <li><a class="text-muted" href="#">Another one</a></li>
-        <li><a class="text-muted" href="#">Last time</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Resource</a></li>
-        <li><a class="text-muted" href="#">Resource name</a></li>
-        <li><a class="text-muted" href="#">Another resource</a></li>
-        <li><a class="text-muted" href="#">Final resource</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Business</a></li>
-        <li><a class="text-muted" href="#">Education</a></li>
-        <li><a class="text-muted" href="#">Government</a></li>
-        <li><a class="text-muted" href="#">Gaming</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Team</a></li>
-        <li><a class="text-muted" href="#">Locations</a></li>
-        <li><a class="text-muted" href="#">Privacy</a></li>
-        <li><a class="text-muted" href="#">Terms</a></li>
-      </ul>
-    </div> -->
+{% endblock data%}
 
 
-
-
-    <div class="container">
-    <div class="row footer-row">
-      <div class="footer-blocks col-md-12">
-        <div class="footer-center">
-          <h1 style="margin-bottom:0px;">Pre-Go</h1>
-          <p>Delivering your essentials</p>
-          <!-- <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Team</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Help</a></li>
-          </ul> -->
-        <!-- <div class="footer-description">
-          <h6 style="font-weight: 200">Copyright &copy 2019-2020 Sightnext Informatics Pvt. Ltd. All rights reserved.</h6>
-        </div>
-        <div>
-          <p><a href="" style="">T&C</a> | <a href="">FAQ </a></p>
-        </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script></body>
-</html>

@@ -81,6 +81,27 @@ a:hover{
 	}
 	
 }
+.car-link:hover{
+	background-color: none;
+	background:none;
+}
+.carousel-caption{
+	bottom: 25%;
+}
+.carousel-control-prev:hover,.carousel-control-next:hover{
+	background: none;
+}
+
+.carousel-control-prev-icon:hover{
+	background-color: none;
+}
+.carousel-control-prev>a:hover{
+	background-color: none;
+}
+.carousel-control-prev>a{
+	background: none;
+	
+}
 .carousel-item{
 	height: 32rem;
 }
@@ -151,6 +172,14 @@ li>a:hover{
 .margin{
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+.mesg-secs{
+	margin: 45px 0px;
+    background: whitesmoke;
+    padding: 50px;
+}
+.mesg-sec-links{
+	text-align: center;
 }
 .mob-no-box{
 	padding: 6px 20px;
@@ -372,6 +401,14 @@ input[type=number] {
 		/*font-weight: 200;*/
 	}
 }
+.why-block{
+	margin: 40px 0px;
+	padding: 40px 0px;
+	letter-spacing: .25px;
+}
+.why-steps{
+	margin:5px 0px;
+}
 ul{
 	margin: 0px;
 	padding: 0px;
@@ -388,6 +425,10 @@ ul{
     margin-bottom: 5px;
     /*margin: 0px -15px;
     margin-top: -4px;*/
+	}
+	.why-block{
+		margin: 0px 0px;
+		padding: 20px 0px;
 	}
 	.nav-item-image{
 		margin-left: -17px;
