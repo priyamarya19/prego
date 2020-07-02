@@ -29,7 +29,7 @@ a{
 a:hover{
 	color: #ffffff;
 	text-decoration: none;
-	background-color: #0a97b0;
+	/*background-color: #ED3C62;*/
 }
 .banner{
 	background:url('../../static/images/b9.png') ;
@@ -110,7 +110,7 @@ a:hover{
 	/*font-weight: 100;*/
 	margin: 0px 10px;
     padding: 5px 30px;
-    background: #ff4301;
+    background: #ED3C62;
     border-radius: 18px;
     border: 0px;
     letter-spacing: .25pt;
@@ -175,7 +175,7 @@ li>a:hover{
 }
 .mesg-secs{
 	margin: 45px 0px;
-    background: whitesmoke;
+    background: #ffeddf;
     padding: 50px;
 }
 .mesg-sec-links{
@@ -421,8 +421,8 @@ ul{
 	.fs-h-1{
 		color: black;
     font-size: 25px;
-    background: #ff4301;
-    margin-bottom: 5px;
+    /*background: #ED3C62;*/
+    /*margin-bottom: 5px;*/
     /*margin: 0px -15px;
     margin-top: -4px;*/
 	}
@@ -445,7 +445,7 @@ ul{
 		
 	}
 	.py-2:first-child{
-		padding-top: .5rem!important;
+		/*padding-top: .5rem!important;*/
 	}
 	.py-5{
 		padding-top: 0px!important;
