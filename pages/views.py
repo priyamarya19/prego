@@ -17,6 +17,12 @@ def why(request):
 	}
 	return render(request,'why.html',context)
 
+def safety(request):
+	context={
+		'message':"Hello there!! You have reached why page. Welcome!!"
+	}
+	return render(request,'safety.html',context)
+
 def how(request):
 	context={}
 	return render(request,'how.html',context)

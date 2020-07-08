@@ -56,6 +56,7 @@ a:hover{
 
 .btn-outline-secondary {
     color: #212529;
+    border: none;
 }
 
 @media only screen and (max-width: 991px){
@@ -333,6 +334,7 @@ input[type=number] {
 	.steps-blocks:last-child{
 		margin-bottom:60px;
 	}
+	
 }
 
 .support-block{
@@ -432,6 +434,15 @@ ul{
 	}
 	.nav-item-image{
 		margin-left: -17px;
+	}
+	.py-1{
+		padding-top: 0px!important;
+	}
+	.site-name-nav
+	{
+		background: antiquewhite;
+		color: #1e152a!important;
+		margin: 0px -15px;
 	}
 }
 

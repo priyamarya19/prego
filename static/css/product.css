@@ -7,7 +7,7 @@
  */
 
 .site-header {
-  background-color:#1e152a;
+  background-image: linear-gradient(to right, #1e152a,#141938,#141938,#1e152a);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
